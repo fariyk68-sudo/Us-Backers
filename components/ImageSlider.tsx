@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { SLIDER_IMAGES } from '../constants';
 
 const ImageSlider: React.FC = () => {
@@ -42,12 +43,12 @@ const ImageSlider: React.FC = () => {
               {slide.description}
             </p>
             <div className={`flex space-x-4 transition-all duration-1000 delay-500 transform ${index === current ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <a href="#/menu" className="bg-[#FF85A1] text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-[#FF85A1] transition-all">
+              <Link to="/menu" className="bg-[#FF85A1] text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-[#FF85A1] transition-all">
                 View Menu
-              </a>
-              <a href="#/contact" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-[#5D4037] transition-all">
+              </Link>
+              <Link to="/contact" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-white hover:text-[#5D4037] transition-all">
                 Order Custom
-              </a>
+              </Link>
             </div>
           </div>
         </div>
